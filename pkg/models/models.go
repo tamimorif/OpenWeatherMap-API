@@ -2,7 +2,7 @@ package models
 
 import "time"
 
-type Cities struct {
+type City struct {
 	ID        uint
 	Name      string
 	CreatedAt time.Time
@@ -15,7 +15,7 @@ type Marks struct {
 	WindSpeed   float64
 	Visibility  uint
 	CreatedAt   time.Time
-	//ChanceOfRain float64
+	//ChanceOfRain float64bh
 }
 
 //type Hourly struct {

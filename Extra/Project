@@ -1,0 +1,14 @@
+Build a command-line tool that fetches weather data for a user-specified location
+using an API like OpenWeatherMap.
+The tool should take the location as a command-line argument and then
+display the current weather conditions (e.g., temperature, humidity, wind speed)
+for that location.
+
+Here are some steps to get started:
+
+Sign up for an API key with OpenWeatherMap (or any other weather API provider).
+Use a Go HTTP client to make a GET request
+to the API endpoint to fetch weather data for the specified location.
+Parse the response JSON to extract
+the relevant weather data (e.g., temperature, humidity, wind speed).
+Display the weather data in a user-friendly format on the command line.
