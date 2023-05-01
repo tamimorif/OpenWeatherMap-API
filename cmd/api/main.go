@@ -31,9 +31,9 @@ func DBInit(user, password, dbname, port string) (*gorm.DB, error) {
 }
 
 func main() {
-	DBName := flag.String("dbname", "crm_service", "Enter the name of DB")
+	DBName := flag.String("dbname", "OpenWeatherMap-API", "Enter the name of DB")
 	DBUser := flag.String("dbuser", "postgres", "Enter the name of a DB user")
-	DBPassword := flag.String("dbpassword", "2609", "Enter the password of user")
+	DBPassword := flag.String("dbpassword", "developer", "Enter the password of user")
 	DBPort := flag.String("dbport", "5432", "Enter the port of DB")
 	flag.Parse()
 
