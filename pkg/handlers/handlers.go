@@ -15,6 +15,7 @@ type Handler struct {
 func NewHandler(db *gorm.DB) Handler {
 	return Handler{DB: db}
 }
+
 func (h *Handler) GetOneWeather(c *gin.Context) {
 	//Task1
 	// Use the Open Weather API to receive weather data for the given location
