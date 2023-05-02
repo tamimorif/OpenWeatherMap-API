@@ -1,0 +1,14 @@
+first make a database on your service then do this,
+create table mark(
+    ID int primary key,
+    CityID INTEGER REFERENCES cities(ID) NOT NULL,
+    Temperature float,
+    WindSpeed float,
+    Visibility int,
+    CreatedAt timestamp
+);
+create table cities(
+    ID int primary key,
+    Name varchar(20),
+    CreatedAt timestamp
+);
