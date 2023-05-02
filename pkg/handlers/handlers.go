@@ -8,14 +8,14 @@ import (
 	"net/http"
 )
 
-type handler struct {
+type Handler struct {
 	DB *gorm.DB
 }
 
-func NewHandler(db *gorm.DB) handler {
-	return handler{DB: db}
+func NewHandler(db *gorm.DB) Handler {
+	return Handler{DB: db}
 }
-func (h *handler) GetOneWeather(c *gin.Context) {
+func (h *Handler) GetOneWeather(c *gin.Context) {
 	//Task1
 	// Use the Open Weather API to receive weather data for the given location
 	// Используйте Open Weather API для получения данных о погоде для заданного местоположения.
