@@ -52,6 +52,8 @@ func main() {
 
 	router := gin.Default()
 
+	router.GET("/teachers", h.GetOneWeather)
+
 	err = router.Run(":4000")
 	if err != nil {
 		log.Fatal(err)
