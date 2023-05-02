@@ -36,7 +36,6 @@ func DBInit(user, password, dbname, port string) (*gorm.DB, error) {
 
 func main() {
 	DBName := flag.String("dbname", "OpenWeatherMap", "Enter the name of DB")
-
 	DBUser := flag.String("dbuser", "postgres", "Enter the name of a DB user")
 	DBPassword := flag.String("dbpassword", "developer", "Enter the password of user")
 	DBPort := flag.String("dbport", "5432", "Enter the port of DB")
@@ -52,7 +51,7 @@ func main() {
 
 	router := gin.Default()
 
-	router.GET("/teachers", h.GetOneWeather)
+	router.GET("/city", h.GetOneWeather)
 
 	err = router.Run(":4000")
 	if err != nil {
