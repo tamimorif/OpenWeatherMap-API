@@ -2,6 +2,7 @@ package main
 
 import (
 	"OpenWeatherMap-API/pkg/handlers"
+	"OpenWeatherMap-API/pkg/models"
 	"flag"
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/postgres"
@@ -22,7 +23,10 @@ func DBInit(user, password, dbname, port string) (*gorm.DB, error) {
 		return nil, err
 	}
 
-	err = db.AutoMigrate()
+	err = db.AutoMigrate(
+		&models.City{},
+		&models.Marks{},
+	)
 	if err != nil {
 		return nil, err
 	}
